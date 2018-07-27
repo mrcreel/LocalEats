@@ -1,61 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Local Eats</title>
+  <title>LocalEats</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="css/main.css
   " />
-  <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" src="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" />
+
 
   <meta name="Description" content="LocalEats Local Restaurant Finder">
-  <meta name="theme-color" content="#1b5e20"/>
+  <meta name="theme-color" content="#1b5e20" />
 
   <link rel="manifest" href="../manifest.json">
 
   <script>
     if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('../app/sw.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
-
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('../app/sw.js').then(function (registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function (err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
   </script>
 
 </head>
 
 <body>
-  <header aria-label="Local Eats">
-    Local Eats
+  <header>
+    <div aria-label="Local Eats">
+      <h1 class="brand" >
+        <span class="primary">Local</span>
+        <span class="secondary">Eats</span>
+      </h1>
+    </div>
   </header>
 
   <main></main>
 
-  <footer></footer>
+  <footer>
 
+    <div class="menu-btn">
+
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+      <div class="btn-line"></div>
+
+    </div>
+
+    <nav class="menu">
+
+      <div class="menu-branding">
+
+      </div>
+
+      <ul class="menu-nav">
+        <li class="nav-item">Map</li>
+        <li class="nav-item">Restaurant List</li>
+        <li class="nav-item">Contact</li>
+      </ul>
+
+    </nav>
+
+  </footer>
+  <!--
   <script src="../app/js/main.js"></script>
 
+      // Initialize Service Worker
+-->
   <script>
-    // Initialize Service Worker
     if ('serviceWorker' in navigator) {
-  window.addEventListener('load', function() {
-    navigator.serviceWorker.register('../app/sw.js').then(function(registration) {
-      // Registration was successful
-      console.log('ServiceWorker registration successful with scope: ', registration.scope);
-    }, function(err) {
-      // registration failed :(
-      console.log('ServiceWorker registration failed: ', err);
-    });
-  });
-}
-
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('../app/sw.js').then(function (registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function (err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
   </script>
 </body>
 
