@@ -1,0 +1,19 @@
+{
+  "name": "LocalEats",
+  "version": "0.0.1",
+  "description": "Udacity Grow with Google Mobile Web Specialist Project",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mrcreel/LocalEats.git"
+  },
+  "author": "Michael R. Creel",
+  "license": "MIT",
+  "dependencies": {
+    "node-sass": "^4.9.2",
+    "npm": "^6.2.0"
+  }
+}
