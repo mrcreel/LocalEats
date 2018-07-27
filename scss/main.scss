@@ -30,7 +30,7 @@ h1 {
 body {
   background: $background-color;
   min-width: 295px;
-  max-width: 100vw;
+  width: 100vw;
 }
 
 header {
@@ -50,15 +50,26 @@ header {
 
 main {
   margin-top: $header-footer + 8px;
+  margin-bottom: $header-footer - 8px;
   min-height: $minHeight;
-  background: $section-background;
-  margin-bottom: 8px;
+  background: whitesmoke;
 }
 
 footer {
+  display: flex;
+  flex-wrap: wrap;
   position: fixed;
   bottom: 0;
   background: $primary-light;
-  height: 36px;
   width:100vw;
+}
+
+.menu{
+  display: flex;
+  flex-direction: row;
+  height: 36px;
+}
+
+.icons{
+  float: right;
 }

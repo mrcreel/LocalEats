@@ -16,7 +16,7 @@ h1 {
 body {
   background: #E1E2E1;
   min-width: 295px;
-  max-width: 100vw; }
+  width: 100vw; }
 
 header {
   background: #EEEEEE;
@@ -33,13 +33,22 @@ header {
 
 main {
   margin-top: 56px;
+  margin-bottom: 40px;
   min-height: 896px;
-  background: #EEEEEE;
-  margin-bottom: 8px; }
+  background: whitesmoke; }
 
 footer {
+  display: flex;
+  flex-wrap: wrap;
   position: fixed;
   bottom: 0;
   background: #4c8c4a;
-  height: 36px;
   width: 100vw; }
+
+.menu {
+  display: flex;
+  flex-direction: row;
+  height: 36px; }
+
+.icons {
+  float: right; }

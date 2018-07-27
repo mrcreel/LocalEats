@@ -8,7 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="css/main.css
   " />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
   <link rel="stylesheet" src="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.css" />
 
 
@@ -17,26 +18,12 @@
 
   <link rel="manifest" href="../manifest.json">
 
-  <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function () {
-        navigator.serviceWorker.register('../app/sw.js').then(function (registration) {
-          // Registration was successful
-          console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        }, function (err) {
-          // registration failed :(
-          console.log('ServiceWorker registration failed: ', err);
-        });
-      });
-    }
-  </script>
-
 </head>
 
 <body>
   <header>
     <div aria-label="Local Eats">
-      <h1 class="brand" >
+      <h1 class="brand">
         <span class="primary">Local</span>
         <span class="secondary">Eats</span>
       </h1>
@@ -47,18 +34,14 @@
 
   <footer>
 
-    <div class="menu-btn">
 
-      <div class="btn-line"></div>
-      <div class="btn-line"></div>
-      <div class="btn-line"></div>
-
-    </div>
 
     <nav class="menu">
 
-      <div class="menu-branding">
-
+      <div class="menu-btn">
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
+        <div class="btn-line"></div>
       </div>
 
       <ul class="menu-nav">
@@ -67,12 +50,27 @@
         <li class="nav-item">Contact</li>
       </ul>
 
+      <div class="icons">
+        <a href="#!">
+          <i class="fab fa-twitter fa-1.5x"></i>
+        </a>
+        <a href="#!">
+          <i class="fab fa-facebook fa-1.5x"></i>
+        </a>
+        <a href="#!">
+          <i class="fab fa-linkedin fa-1.5x"></i>
+        </a>
+        <a href="#!">
+          <i class="fab fa-github fa-1.5x"></i>
+        </a>
+      </div>
+
     </nav>
 
   </footer>
-  <!--
-  <script src="../app/js/main.js"></script>
 
+  <script src="js/main.js"></script>
+  <!--
       // Initialize Service Worker
 -->
   <script>
