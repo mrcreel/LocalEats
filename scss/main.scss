@@ -1,4 +1,5 @@
 @import 'config';
+@import 'menu';
 
 * {
   box-sizing: border-box;
@@ -20,7 +21,7 @@ h1 {
 }
 
 .secondary {
-  color: $secondary-light;
+  color: $secondary-dark;
 }
 
 a{
@@ -58,19 +59,14 @@ header {
   height: 3rem;
 }
 
-.menu-btn {
-  float: right;
-}
-
 main {
-  margin-top: 5.5rem;
-  margin-bottom: 5.75rem;
+  margin-top: 4rem;
   min-height: 400px;
   background: whitesmoke;
 }
 
 footer {
-  background: $primary-light;
+  background-color: #ffffff;
   width: 100%;
   bottom: 0;
 }
@@ -79,9 +75,10 @@ footer {
   margin-top: 1rem;
   padding: 0.5rem;
   a {
+    color: $secondary-light;
     padding: 0.5rem;
     &:hover{
-      color: $secondary-dark;
+      color: $primary;
       @include easeOut();
 
     }
