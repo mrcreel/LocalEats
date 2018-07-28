@@ -3,11 +3,13 @@
 
 * {
   box-sizing: border-box;
+  // overflow: hidden;
 }
 
 html {
   display: flex;
   flex-wrap: wrap;
+  min-width: $minWidth;
 }
 
 h1 {
@@ -61,7 +63,7 @@ header {
 
 main {
   margin-top: 4rem;
-  min-height: 400px;
+  min-height: 600px;
   background: whitesmoke;
 }
 
