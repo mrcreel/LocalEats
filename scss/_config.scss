@@ -1,0 +1,12 @@
+$primary: #1b5e20;
+$primary-light: #4c8c4a;
+$secondary: #0277bd;
+$secondary-light: #58a5f0;
+$background-color: #E1E2E1;
+$section-background: #EEEEEE;
+$secondary-dark: #004c8c;
+$header-height: 2.5rem;
+
+@mixin easeOut {
+  transition: all 0.5s ease-out;
+}
