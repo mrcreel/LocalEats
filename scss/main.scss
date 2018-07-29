@@ -1,5 +1,6 @@
 @import 'config';
 @import 'menu';
+@import 'map';
 
 * {
   box-sizing: border-box;
@@ -62,7 +63,7 @@ header {
 }
 
 main {
-  margin-top: 4rem;
+  margin-top: 3.5rem;
   min-height: 600px;
   background: whitesmoke;
 }
