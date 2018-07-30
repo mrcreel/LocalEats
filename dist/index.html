@@ -27,16 +27,16 @@
       <span class="secondary">Eats</span>
     </h1>
     <div class="menu-btn">
-      <div class="btn-line"></div>
-      <div class="btn-line"></div>
-      <div class="btn-line"></div>
+      <div class="menu-btn-line"></div>
+      <div class="menu-btn-line"></div>
+      <div class="menu-btn-line"></div>
     </div>
 
     <nav class="menu">
       <ul class="menu-nav">
-        <li class="nav-item">Map</li>
-        <li class="nav-item">Restaurant List</li>
-        <a href="#contact" <li class="nav-item">Contact</li>
+        <li class="menu-nav-item">Map</li>
+        <li class="menu-nav-item">Restaurant List</li>
+        <a href="#contact" <li class="menu-nav-item">Contact</li>
         </a>
       </ul>
     </nav>
@@ -45,22 +45,24 @@
   <main class="map-container">
     <section>
       <label for="neighborhoods-select">Filter by Neighborhood</label>
-      <div id="neighborhoods-select"
+      <div
       class="select-box"
       name="neighborhoods" onchange="updateRestaurants()">
-      <!--  <option value="all">All Neighborhoods</option> -->
+      <select  id="neighborhoods-select">
+        <option value="all">All Neighborhoods</option>
+    </select>
     </div>
     </section>
 
     <section>
       <label for="cuisines-select">Filter by Cuisine</label>
-      <div id="cuisines-select"
+      <div
       class="select-box"
       name="cuisines"
       onchange="updateRestaurants()">
-      <!--   <option value="all">
-      All Cuisines</option>
-        -->
+      <select id="cuisines-select">
+        <option value="all">All Cuisines</option>
+      </select>
       </div>
     </section>
 

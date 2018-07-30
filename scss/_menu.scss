@@ -7,7 +7,7 @@
   cursor: pointer;
   @include easeOut;
 
-  .btn-line {
+  &-line {
     width: 28px;
     height: 3px;
     margin: 0 0 5px 0;
@@ -22,7 +22,7 @@
   &.close {
     // transform: rotate(180deg);
 
-    .btn-line {
+    .menu-btn-line {
       &:nth-child(1) {
         transform: rotate(45deg) translate(5px, 5px);
       }
@@ -45,9 +45,12 @@
   background-color: $primary-dark;
   color: whitesmoke;
   font-weight: 600;
+  transform: translate3d(0, -100%, 0);
+  @include easeOut;
 
   &.show {
     visibility: visible;
+    transform: translate3d(0, 0, 0);
   }
 
   &-nav {
@@ -58,10 +61,10 @@
     height: 67vh;
     padding: 3.5rem 0 0 0;
     margin: 0;
+
+    &-item {
+      padding: 0.5rem;
+    }
   }
-}
-.nav {
-  &-item {
-    padding: 0.5rem;
-  }
+
 }
