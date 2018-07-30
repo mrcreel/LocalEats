@@ -43,6 +43,9 @@
 .nav-item {
   padding: 0.5rem; }
 
+.select-box {
+  width: 150px; }
+
 * {
   box-sizing: border-box; }
 
