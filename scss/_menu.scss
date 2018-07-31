@@ -38,7 +38,7 @@
 
 .menu {
   position: fixed;
-  width: 50vw;
+  width: 40vw;
   right: 0.5rem;
   opacity: 0.7;
   visibility: hidden;
@@ -61,10 +61,20 @@
     height: 67vh;
     padding: 3.5rem 0 0 0;
     margin: 0;
+    list-style: none;
 
-    &-item {
-      padding: 0.5rem;
+    &-link {
+      display: inline-block;
+      padding: 1rem;
+      font-weight: 300;
+      width: 100%;
+
+      &:hover{
+        color: $secondary-light;
+        text-decoration: underline;
+        font-weight: bold;
+      }
     }
-  }
 
+  }
 }

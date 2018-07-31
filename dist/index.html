@@ -32,42 +32,50 @@
       <div class="menu-btn-line"></div>
     </div>
 
-    <nav class="menu">
+    <nav class="menu" id="menu">
       <ul class="menu-nav">
-        <li class="menu-nav-item">Map</li>
-        <li class="menu-nav-item">Restaurant List</li>
-        <a href="#contact" <li class="menu-nav-item">Contact</li>
+        <a href="#" class="menu-nav-link current">
+          <li class="menu-nav-text">Map</li>
+        </a>
+        <a href="#" class="menu-nav-link">
+          <li class="menu-nav-text">Restaurant List
+          </li>
+        </a>
+        <a href="#contact" class="menu-nav-link">
+          <li class="menu-nav-text">Contact</li>
         </a>
       </ul>
     </nav>
   </header>
 
-  <main class="map-container">
-    <section>
-      <label for="neighborhoods-select">Filter by Neighborhood</label>
-      <div
-      class="select-box"
-      name="neighborhoods" onchange="updateRestaurants()">
-      <select  id="neighborhoods-select">
-        <option value="all">All Neighborhoods</option>
-    </select>
-    </div>
-    </section>
+  <main>
+    <div class="map-container">
+      <div class="filters">
+        <section>
+          <label for="neighborhoods-select">Neighborhoods</label>
+          <div class="custom-select" name="neighborhoods" onchange="updateRestaurants()">
+            <select id="neighborhoods-select">
+              <option value="all">All Neighborhoods</option>
+            </select>
+          </div>
+        </section>
 
-    <section>
-      <label for="cuisines-select">Filter by Cuisine</label>
-      <div
-      class="select-box"
-      name="cuisines"
-      onchange="updateRestaurants()">
-      <select id="cuisines-select">
-        <option value="all">All Cuisines</option>
-      </select>
+        <section>
+          <label for="cuisines-select">Cuisines</label>
+          <div class="custom-select" name="cuisines" onchange="updateRestaurants()">
+            <select id="cuisines-select">
+              <option value="all">All Cuisines</option>
+            </select>
+          </div>
+        </section>
       </div>
-    </section>
+      <div id="map" aria-label="Map"></div>
 
-    <div id="map" aria-label="Map"></div>
-    <ul id="restaurants-list"></ul>
+    </div>
+
+    <div class="restaurant-results">
+      <ul id="restaurants-list"></ul>
+    </div>
 
   </main>
 

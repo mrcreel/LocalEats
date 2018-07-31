@@ -1,10 +1,16 @@
-.select-box {
-  width: 150px;
-}
-
-#map{
-  width: 350px;
-  height: 400px;
+#map {
   min-width: 275px;
+  height: 400px;
+  width: 100%;
   z-index: 0;
+  margin: 0 auto;
+}
+.filters{
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: 8px auto;
+}
+.custom-select {
+  display: inline;
 }
