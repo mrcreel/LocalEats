@@ -190,9 +190,10 @@ createRestaurantHTML = (restaurant) => {
   li.append(info);
 
   const more = document.createElement('a');
-  more.className = "restaurant-card-link"
-  more.innerHTML = 'View Details';
+  more.className = "button restaurant-card-button";
   more.href = DBHelper.urlForRestaurant(restaurant);
+  more.innerHTML = 'View Details';
+  // more.href = DBHelper.urlForRestaurant(restaurant);
   li.append(more)
 
   return li

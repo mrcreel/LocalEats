@@ -80,6 +80,8 @@
   padding: 0; }
 
 .restaurant-card {
+  display: flex;
+  flex-direction: column;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   transition: all 0.2s ease-out;
   list-style: none;
@@ -87,9 +89,31 @@
   .restaurant-card:hover {
     box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
   .restaurant-card-name {
+    align-self: center;
     margin: 0 0 1rem 0;
     font-size: 1.25rem;
     font-weight: bold; }
+  .restaurant-card-button {
+    justify-content: center;
+    align-self: center;
+    position: relative;
+    border-radius: 3px;
+    border: 2px solid;
+    font-size: 1.5em;
+    padding: 0.75rem 1rem;
+    margin-bottom: 1.0rem;
+    background-color: #E1E2E1;
+    color: #0277bd;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); }
+    .restaurant-card-button:hover {
+      color: #E1E2E1;
+      background-color: #0277bd;
+      cursor: pointer;
+      text-decoration: underline;
+      box-shadow: 0 8px 17px 0 rgba(0, 0, 0, 0.2); }
+    .restaurant-card-button:active {
+      transition: all 0.2s ease-out;
+      box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15), 0 3px 6px rgba(0, 0, 0, 0.5); }
   .restaurant-card-info {
     margin: 0;
     padding-left: 1rem; }
