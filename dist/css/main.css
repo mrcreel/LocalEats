@@ -148,21 +148,50 @@
 
 #restaurant-container {
   display: inline;
-  margin: 0 0 1rem 0;
-  border-bottom: 2px groove; }
+  margin: 0 0 1rem 0; }
 
 #restaurant-name {
   margin: 0; }
 
 #restaurant-hours {
+  width: 100%; }
+
+.restaurant-hours {
+  margin: 0.75rem;
+  background-color: white;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+  .restaurant-hours-table {
+    padding: 0.5rem 0;
+    margin: 0 auto; }
+    .restaurant-hours-table-header {
+      margin: 8px 0;
+      background-color: #58a5f0; }
+    .restaurant-hours-table-row {
+      border-bottom: lightblue solid 1px; }
+    .restaurant-hours-table-day {
+      padding-right: 0.5rem;
+      text-align: right;
+      border-right: lightblue solid 1px; }
+    .restaurant-hours-table-times {
+      text-align: left;
+      padding-left: 0.5rem; }
+
+#reviews-container {
+  margin: 4px;
+  background-color: white; }
+
+.restaurant-reviews-list {
+  list-style: none;
+  padding: 0; }
+
+.restaurant-reviews-header {
+  background-color: #58a5f0; }
+
+.review {
   width: 100%;
-  border-bottom: 2px groove; }
-
-.restaurant-hours-header {
-  margin: 0; }
-
-.restaurant-hours-table-day {
-  float: right; }
+  margin: 4px;
+  background-color: #E1E2E1;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
 
 * {
   box-sizing: border-box; }

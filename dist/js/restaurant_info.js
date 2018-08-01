@@ -94,15 +94,16 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
   const hours = document.getElementById('restaurant-hours');
   for (let key in operatingHours) {
     const row = document.createElement('tr');
+    row.className = 'restaurant-hours-table-row'
 
     const day = document.createElement('td');
     day.className = 'restaurant-hours-table-day';
-    day.innerHTML = key;
+    day.innerHTML = `${key} `;
     row.appendChild(day);
 
     const time = document.createElement('td');
     time.className = 'restaurant-hours-table-times';
-    time.innerHTML = operatingHours[key];
+    time.innerHTML = ` ${operatingHours[key]}`;
     row.appendChild(time);
 
     hours.appendChild(row);
@@ -114,8 +115,9 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
  */
 fillReviewsHTML = (reviews = self.restaurant.reviews) => {
   const container = document.getElementById('reviews-container');
-  const title = document.createElement('h2');
+  const title = document.createElement('h3');
   title.innerHTML = 'Reviews';
+  title.className = 'restaurant-reviews-header';
   container.appendChild(title);
 
   if (!reviews) {
@@ -136,19 +138,24 @@ fillReviewsHTML = (reviews = self.restaurant.reviews) => {
  */
 createReviewHTML = (review) => {
   const li = document.createElement('li');
+  li.className = "review"
   const name = document.createElement('p');
-  name.innerHTML = review.name;
+  name.innerHTML = `Review: ${review.name}`;
+  name.className = 'review-name';
   li.appendChild(name);
 
   const date = document.createElement('p');
-  date.innerHTML = review.date;
+  date.innerHTML = `Date: ${review.date}`;
+  date.className = 'review-date';
   li.appendChild(date);
 
   const rating = document.createElement('p');
+  rating.className = 'review-rating';
   rating.innerHTML = `Rating: ${review.rating}`;
   li.appendChild(rating);
 
   const comments = document.createElement('p');
+  comments.className = 'review-comments';
   comments.innerHTML = review.comments;
   li.appendChild(comments);
 
