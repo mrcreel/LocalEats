@@ -89,24 +89,10 @@ initMap = () => {
 
   updateRestaurants();
 }
-/* window.initMap = () => {
-  let loc = {
-    lat: 40.722216,
-    lng: -73.987501
-  };
-  self.map = new google.maps.Map(document.getElementById('map'), {
-    zoom: 12,
-    center: loc,
-    scrollwheel: false
-  });
-  updateRestaurants();
-} */
 
 /**
  * Update page and map for current restaurants.
  */
-
-
 updateRestaurants = () => {
   const cSelect = document.getElementById('cuisines-select');
   const nSelect = document.getElementById('neighborhoods-select');
@@ -162,12 +148,15 @@ fillRestaurantsHTML = (restaurants = self.restaurants) => {
 createRestaurantHTML = (restaurant) => {
   const li = document.createElement('li');
   li.className = "restaurant-card";
+  li.id = `restaurant-card_${restaurant.id}`;
 
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   image.alt = '';
   li.append(image);
+
+
 
   const info = document.createElement('div');
   info.className = "restaurant-card-info";
@@ -225,28 +214,3 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 } */
 
-const menuBtn = document.querySelector(".menu-btn");
-const menu = document.querySelector(".menu");
-const menuNav = document.querySelector(".menu-nav");
-const navItems = document.querySelectorAll(".nav-item");
-
-let showMenu = false;
-
-menuBtn.addEventListener("click", toggleMenu);
-
-function toggleMenu () {
-  if (!showMenu) {
-    menuBtn.classList.add("close");
-    menu.classList.add("show");
-    menuNav.classList.add("show");
-    navItems.forEach(navItem => navItem.classList.add("show"));
-    showMenu = true;
-  } else {
-    menuBtn.classList.remove("close");
-    menu.classList.remove("show");
-    menuNav.classList.remove("show");
-    navItems.forEach(navItem => navItem.classList.remove("show"));
-    showMenu = false;
-  }
-
-};
