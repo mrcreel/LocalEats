@@ -77,7 +77,7 @@ fillRestaurantHTML = (restaurant = self.restaurant) => {
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
 
   const cuisine = document.getElementById('restaurant-cuisine');
-  cuisine.innerHTML = restaurant.cuisine_type;
+  cuisine.innerHTML = `${restaurant.cuisine_type} Cuisine`;
 
   // fill operating hours
   if (restaurant.operating_hours) {
@@ -96,10 +96,12 @@ fillRestaurantHoursHTML = (operatingHours = self.restaurant.operating_hours) => 
     const row = document.createElement('tr');
 
     const day = document.createElement('td');
+    day.className = 'restaurant-hours-table-day';
     day.innerHTML = key;
     row.appendChild(day);
 
     const time = document.createElement('td');
+    time.className = 'restaurant-hours-table-times';
     time.innerHTML = operatingHours[key];
     row.appendChild(time);
 

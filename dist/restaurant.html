@@ -24,8 +24,10 @@
   <!-- Beginning header -->
   <header aria-label="Local Eats">
     <h1 class="brand">
+      <a href="index.html" style="display: flex;">
       <span class="primary">Local</span>
       <span class="secondary">Eats</span>
+      </a>
     </h1>
     <!-- Beginning breadcrumb -->
     <ul id="breadcrumb"></ul>
@@ -37,7 +39,10 @@
 
     <nav class="menu" id="menu">
       <ul class="menu-nav">
-        <a href="index.html#" class="menu-nav-link current">
+          <a href="index.html" class="menu-nav-link current">
+              <li class="menu-nav-text">Home</li>
+            </a>
+        <a href="#map" class="menu-nav-link current">
           <li class="menu-nav-text">Map</li>
         </a>
         <a href="#restaurant-name" class="menu-nav-link">
@@ -59,20 +64,29 @@
       <div id="map"></div>
     </section>
     <!-- End map -->
-    <!-- Beginning restaurant -->
-    <section id="restaurant-container">
-      <h1 id="restaurant-name"></h1>
-      <img id="restaurant-img">
-      <p id="restaurant-cuisine"></p>
-      <p id="restaurant-address"></p>
-      <table id="restaurant-hours"></table>
-    </section>
-    <!-- end restaurant -->
-    <!-- Beginning reviews -->
-    <section id="reviews-container">
-      <ul id="reviews-list"></ul>
-    </section>
-    <!-- End reviews -->
+    <!-- Beginning restaurant info -->
+    <div class="restaurant-card">
+      <section id="restaurant-container">
+
+        <p class="restaurant-card-name" id="restaurant-name"></p>
+        <img id="restaurant-img" class="restaurant-img">
+        <div class="restaurant-card-info">
+          <p class="restaurant-card-info-cuisine" id="restaurant-cuisine"></p>
+          <p class="restaurant-card-info-address" id="restaurant-address"></p>
+        </div>
+
+      </section>
+      <!-- end restaurant -->
+      <!-- Beginning reviews -->
+      <section class="restaurant-hours">
+        <h3 class="restaurant-hours-header">Operating Hours</h3>
+          <table class="restaurant-hours-table" id="restaurant-hours"></table>
+      </section>
+      <section class="restaurant-reviews" id="reviews-container">
+        <ul id="reviews-list"></ul>
+      </section>
+      <!-- End reviews -->
+    </div>
   </main>
   <!-- End main -->
 
@@ -106,19 +120,19 @@
   <!--
       // Initialize Service Worker
   -->
-<script>
-  if ('serviceWorker' in navigator) {
-    window.addEventListener('load', function () {
-      navigator.serviceWorker.register('sw.js').then(function (registration) {
-        // Registration was successful
-        console.log('ServiceWorker registration successful with scope: ', registration.scope);
-      }, function (err) {
-        // registration failed :(
-        console.log('ServiceWorker registration failed: ', err);
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw.js').then(function (registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function (err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
       });
-    });
-  }
-</script>
+    }
+  </script>
   <!-- End scripts -->
 
 </body>

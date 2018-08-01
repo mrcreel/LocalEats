@@ -125,12 +125,44 @@
       margin: 0; }
     .restaurant-card-info-address {
       margin: 0 0 1rem 0; }
+    .restaurant-card-info-cuisine {
+      margin: 0; }
 
 .restaurant-card-link {
   color: blue; }
 
 .restaurant-img {
   max-width: 100%; }
+
+#breadcrumb {
+  list-style: none;
+  padding: 0;
+  visibility: hidden; }
+
+#map {
+  min-width: 275px;
+  height: 424px;
+  width: 100%;
+  z-index: 0;
+  margin: 0 auto; }
+
+#restaurant-container {
+  display: inline;
+  margin: 0 0 1rem 0;
+  border-bottom: 2px groove; }
+
+#restaurant-name {
+  margin: 0; }
+
+#restaurant-hours {
+  width: 100%;
+  border-bottom: 2px groove; }
+
+.restaurant-hours-header {
+  margin: 0; }
+
+.restaurant-hours-table-day {
+  float: right; }
 
 * {
   box-sizing: border-box; }
