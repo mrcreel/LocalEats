@@ -12,8 +12,9 @@
   },
   "author": "Michael R. Creel",
   "license": "MIT",
-  "dependencies": {
-    "node-sass": "^4.9.2",
-    "npm": "^6.2.0"
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-image": "^4.3.0",
+    "gulp-webp": "^3.0.0"
   }
 }
