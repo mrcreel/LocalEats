@@ -1,37 +1,52 @@
-var CACHE_NAME = "cache-v1";
-var urlsToCache =
-  [
-    '/',
-    '/dist/index.html',
-    '/dist/restaurant.html',
-    '/dist/',
-    '/dist/js',
-    '/dist/css',
-    '/dist/img',
-    '/dist/data',
-  ];
+const cacheName = "v1";
 
- self.addEventListener("install", function(event) {
-  // Perform install steps
+const CACHE_URLS = [
+  "index.html",
+  "restaurant.html",
+  "./css/main.css",
+  "./js/main.js",
+  "./js/header.js",
+  "./js/dbhelper.js",
+  "./js/map.js",
+  "./js/restaurant_info.js",
+  './data/restaurants.jsom'
+];
+
+// Install SW
+self.addEventListener("install", event => {
   event.waitUntil(
-    caches.open(CACHE_NAME)
-      .then(function(cache) {
-        console.log('Opened cache');
-        return cache.addAll(urlsToCache);
+    caches
+      .open(cacheName)
+      .then(cache => {
+        console.log(`SW Caching files`);
+        cache.addAll(CACHE_URLS);
       })
+      .then(() => self.skipWaiting())
   );
 });
 
-self.addEventListener('fetch', function(event) {
+// Activate SW
+self.addEventListener("activate", event => {
+  console.log("SW Activated");
+  //Delete old caches
+  event.waitUntil(
+    caches.keys().then(cacheNames => {
+      return Promise.all(
+        cacheNames.map(cache => {
+          if (cache != cacheName) {
+            console.log(`SW: Clear old cache`);
+            return caches.delete(cache);
+          }
+        })
+      );
+    })
+  );
+});
+
+// SW Fetch
+self.addEventListener("fetch", event => {
+  console.log(`SW: Fetching`);
   event.respondWith(
-    caches.match(event.request)
-      .then(function(response) {
-        // Cache hit - return response
-        if (response) {
-          return response;
-        }
-        return fetch(event.request);
-      }
-    )
+    fetch(event.request).catch(() => caches.match(event.request))
   );
 });
