@@ -22,12 +22,12 @@
 
 <body>
   <header aria-label="Local Eats">
-      <h1 class="brand">
-          <a href="index.html" style="display: flex;">
-          <span class="primary">Local</span>
-          <span class="secondary">Eats</span>
-          </a>
-        </h1>
+    <h1 class="brand">
+      <a href="index.html" style="display: flex;">
+        <span class="primary">Local</span>
+        <span class="secondary">Eats</span>
+      </a>
+    </h1>
     <div class="menu-btn">
       <div class="menu-btn-line"></div>
       <div class="menu-btn-line"></div>
@@ -72,7 +72,6 @@
         </section>
       </div>
       <div id="map" role="application"></div>
-
     </div>
 
     <div class="restaurant-results">
@@ -103,24 +102,6 @@
   <script src="./js/dbhelper.js"></script>
   <script src="./js/main.js"></script>
   <script src="./js/header.js"></script>
-
-
-  <!--
-      // Initialize Service Worker
--->
- <script>
-    if ('serviceWorker' in navigator) {
-      window.addEventListener('load', function () {
-        navigator.serviceWorker.register('sw.js').then(function (registration) {
-          // Registration was successful
-          console.log('ServiceWorker registration successful with scope: ', registration.scope);
-        }, function (err) {
-          // registration failed :(
-          console.log('ServiceWorker registration failed: ', err);
-        });
-      });
-    }
-  </script>
 </body>
 
 </html>

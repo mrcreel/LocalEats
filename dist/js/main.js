@@ -33,6 +33,7 @@ fetchNeighborhoods = () => {
  */
 fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
   const select = document.getElementById('neighborhoods-select');
+  console.log(select)
   neighborhoods.forEach(neighborhood => {
     const option = document.createElement('option');
     option.innerHTML = neighborhood;
@@ -60,7 +61,6 @@ fetchCuisines = () => {
  */
 fillCuisinesHTML = (cuisines = self.cuisines) => {
   const select = document.getElementById('cuisines-select');
-
   cuisines.forEach(cuisine => {
     const option = document.createElement('option');
     option.innerHTML = cuisine;
@@ -214,3 +214,14 @@ addMarkersToMap = (restaurants = self.restaurants) => {
   });
 } */
 
+/** Service Worker */
+// Check if service workers are supported
+if (navigator.serviceWorker) {
+  console.log('SW Loaded')
+  window.addEventListener('load', () => {
+    navigator.serviceWorker
+      .register('./sw.js')
+      .then(reg => console.log('SW Registered'))
+      .catch(err => console.log(`SW Err: ${err}`))
+  })
+}
