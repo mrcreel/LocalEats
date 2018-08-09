@@ -1,4 +1,4 @@
-var CACHE_NAME = "v1";
+var CACHE_NAME = "v2";
 
 var urlsToCache = [
   "index.html",
@@ -10,7 +10,8 @@ var urlsToCache = [
   "./js/dbhelper.js",
   "./js/map.js",
   "./js/header.js",
-  "./js/restaurant_info.js"
+  "./js/restaurant_info.js",
+  "./webfonts/"
 ];
 
 // Install Service Worker
@@ -46,7 +47,10 @@ self.addEventListener("activate", function(e) {
 });
 
 // Fetch cache with Service Worker
-self.addEventListener("fetch", function(e) {
+self.addEventListener("fetch", e => {
   console.log("Service worker: Fetching files");
-  e.respondWith(fetch(e.request).catch(() => caches.match(e.request)));
+  e.respondWith(
+    fetch(e.request)
+      .catch(() => caches.match(e.request))
+  );
 });
