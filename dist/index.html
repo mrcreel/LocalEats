@@ -8,10 +8,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" type="text/css" media="screen" href="css/main.css
   " />
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" integrity="sha512-Rksm5RenBEKSKFjgI3a41vrjkw4EVPlJ3+OiI65vTjIdo9brlAacEuKOiQ5OFh7cOI1bkDwLqdLw3Zg0cRJAAQ=="
-    crossorigin="" />
+  <link rel="stylesheet" href="css/all.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css"/>
 
   <meta name="Description" content="LocalEats Local Restaurant Finder">
   <meta name="theme-color" content="#1b5e20" />
@@ -71,7 +69,12 @@
           </div>
         </section>
       </div>
+<<<<<<< HEAD
       <div id="map" role="application"></div>
+=======
+      <div id="map" class="map map-index" id="map" aria-label="Map"></div>
+
+>>>>>>> fetchAll
     </div>
 
     <div class="restaurant-results">
@@ -102,6 +105,27 @@
   <script src="./js/dbhelper.js"></script>
   <script src="./js/main.js"></script>
   <script src="./js/header.js"></script>
+<<<<<<< HEAD
+=======
+
+
+  <!--
+      // Initialize Service Worker
+-->
+<script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('sw.js').then(function (registration) {
+          // Registration was successful
+          console.log('ServiceWorker registration successful with scope: ', registration.scope);
+        }, function (err) {
+          // registration failed :(
+          console.log('ServiceWorker registration failed: ', err);
+        });
+      });
+    }
+  </script>
+>>>>>>> fetchAll
 </body>
 
 </html>
