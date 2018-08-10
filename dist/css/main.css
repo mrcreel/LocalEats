@@ -55,7 +55,6 @@
 
 #map {
   min-width: 275px;
-  max-width: 450px;
   max-height: 450px;
   min-height: 275px;
   z-index: 0; }
@@ -106,13 +105,8 @@
     border: 2px solid;
     padding: 0.75rem 1rem;
     margin-bottom: 1.0rem;
-<<<<<<< HEAD
     background-color: #EEEEEE;
     color: #004c8c;
-=======
-    background-color: #E1E2E1;
-    color: #1b5e20;
->>>>>>> fetchAll
     box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); }
     .restaurant-card-button:hover {
       color: #E1E2E1;
