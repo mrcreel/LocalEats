@@ -1,5 +1,5 @@
 
-var CACHE_NAME = "v1";
+var CACHE_NAME = "v2";
 
 // Install Service Worker
 self.addEventListener("install", function(e) {
