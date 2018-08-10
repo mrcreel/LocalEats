@@ -34,7 +34,6 @@ fetchNeighborhoods = () => {
  */
 fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
   const select = document.getElementById('neighborhoods-select');
-  console.log(select)
   neighborhoods.forEach(neighborhood => {
     const option = document.createElement('option');
     option.innerHTML = neighborhood;
@@ -100,7 +99,6 @@ updateRestaurants = () => {
 
   const cIndex = cSelect.selectedIndex;
   const nIndex = nSelect.selectedIndex;
-
   const cuisine = cSelect[cIndex].value;
   const neighborhood = nSelect[nIndex].value;
 
