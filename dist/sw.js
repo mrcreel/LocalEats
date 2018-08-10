@@ -1,31 +1,8 @@
-var CACHE_NAME = "v2";
-
-var urlsToCache = [
-  "index.html",
-  "restaurant.html",
-  "./css/main.css",
-  "./css/all.css",
-  "./data/restaurants.json",
-  "./js/main.js",
-  "./js/dbhelper.js",
-  "./js/map.js",
-  "./js/header.js",
-  "./js/restaurant_info.js",
-  "./webfonts/"
-];
+var CACHE_NAME = "v1";
 
 // Install Service Worker
 self.addEventListener("install", function(e) {
   console.log("Service worker: Installed");
-  e.waitUntil(
-    caches
-      .open(CACHE_NAME)
-      .then(function(cache) {
-        console.log("Service Worker: Caching Files");
-        cache.addAll(urlsToCache);
-      })
-      .then(() => self.skipWaiting())
-  );
 });
 
 // Activate Service Worker
@@ -48,9 +25,20 @@ self.addEventListener("activate", function(e) {
 
 // Fetch cache with Service Worker
 self.addEventListener("fetch", e => {
-  console.log("Service worker: Fetching files");
+  console.log("Service worker: Fetching site")
   e.respondWith(
     fetch(e.request)
-      .catch(() => caches.match(e.request))
-  );
-});
+    .then(res => {
+      // Clone response
+      const resClone = res.clone();
+      // Open cache
+      caches
+        .open(CACHE_NAME)
+        .then(cache => {
+          // Cache response
+          cache.put(e.request, resClone);
+        });
+      return res;
+    }).catch(err => caches.match(e.request).then(res => res))
+  )
+})
