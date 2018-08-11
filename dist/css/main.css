@@ -128,11 +128,11 @@
   grid-template-areas: 'icons'; }
 
 .icons {
+  display: grid;
   grid-area: icons;
-  grid-template-columns: 1fr;
-  grid-template-areas: 'twitter fb linkedin github'; }
-  .icons .twitter-icon {
-    grid-area: twitter; }
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-areas: 'twitter fb linkedin github';
+  justify-items: center; }
   .icons a {
     color: #58a5f0;
     padding: 0.5rem; }
@@ -206,6 +206,7 @@ a {
   text-decoration: none; }
 
 ul {
+  margin: 0;
   padding: 0;
   list-style-type: none; }
 
