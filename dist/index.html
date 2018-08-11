@@ -53,20 +53,19 @@
     <main class="main-content">
       <div class="map-container">
         <div class="filters">
-          <section>
-            <label for="neighborhoods-select">Neighborhoods</label>
+          <span class="filter-title">Filter Restaurants</span>
+          <section class="neighborhoods-select">
             <div class="custom-select" name="neighborhoods" onchange="updateRestaurants()">
               <select id="neighborhoods-select">
-                <option value="all">All Neighborhoods</option>
+                <option value="all">By Neighborhood</option>
               </select>
             </div>
           </section>
 
-          <section>
-            <label for="cuisines-select">Cuisines</label>
+          <section class="cuisines-select">
             <div class="custom-select" name="cuisines" onchange="updateRestaurants()">
               <select id="cuisines-select">
-                <option value="all">All Cuisines</option>
+                <option value="all">By Cuisine</option>
               </select>
             </div>
           </section>
