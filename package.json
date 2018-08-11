@@ -24,6 +24,7 @@
     "gulp-useref": "^3.1.5",
     "gulp-webp": "^3.0.0",
     "jsdom-quokka-plugin": "^1.0.13",
-    "node-sass": "^4.9.2"
+    "node-sass": "^4.9.2",
+    "pump": "^3.0.0"
   }
 }
