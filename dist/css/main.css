@@ -24,7 +24,8 @@
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto 1fr;
-  grid-template-areas: 'filters' 'map'; }
+  grid-template-areas: 'filters' 'map';
+  grid-row-gap: 0.5rem; }
   .map-container .filters {
     grid-area: filters;
     display: grid;
@@ -53,13 +54,12 @@
   grid-area: results;
   display: grid;
   grid-template-columns: 100%;
-  grid-row-gap: 0.5rem; }
-
-#restaurants-list {
-  padding: 0; }
+  grid-row-gap: 0.75rem;
+  margin: 0 0.5rem; }
 
 .restaurant-card {
   display: flex;
+  width: 100%;
   flex-direction: column;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
   transition: all 0.2s ease-out;
@@ -114,13 +114,31 @@
 
 .main-content {
   margin-top: 2rem;
-  height: 100vh;
   display: grid;
   grid-template-columns: 100%;
   grid-template-rows: auto 1fr;
   grid-row-gap: 1rem;
   grid-template-areas: 'map' 'results';
   background: whitesmoke; }
+
+.main-footer {
+  background-color: #ffffff;
+  display: grid;
+  grid-template-rows: 100%;
+  grid-template-areas: 'icons'; }
+
+.icons {
+  grid-area: icons;
+  grid-template-columns: 1fr;
+  grid-template-areas: 'twitter fb linkedin github'; }
+  .icons .twitter-icon {
+    grid-area: twitter; }
+  .icons a {
+    color: #58a5f0;
+    padding: 0.5rem; }
+    .icons a:hover {
+      color: #1b5e20;
+      transition: all 0.2s ease-out; }
 
 #breadcrumb {
   list-style: none;
@@ -187,28 +205,14 @@ a {
   color: #ffffff;
   text-decoration: none; }
 
+ul {
+  padding: 0;
+  list-style-type: none; }
+
 body {
   background: #E1E2E1;
-  width: 100%;
-  height: 100%;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.5; }
-
-footer {
-  min-width: 295px;
-  background-color: #ffffff;
-  width: 100%;
-  bottom: 0; }
-
-.icons {
-  margin-top: 1rem;
-  padding: 0.5rem; }
-  .icons a {
-    color: #58a5f0;
-    padding: 0.5rem; }
-    .icons a:hover {
-      color: #1b5e20;
-      transition: all 0.2s ease-out; }
 
 .main-head {
   grid-area: header; }
@@ -222,7 +226,7 @@ footer {
 .wrapper {
   display: grid;
   grid-gap: 1rem;
-  grid-template-rows: auto 1fr auto;
+  grid-template-rows: auto auto auto;
   grid-template-columns: 100%;
   grid-row-gap: 1rem;
   grid-template-areas: 'header' 'content' 'footer'; }
