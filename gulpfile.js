@@ -32,14 +32,14 @@ gulp.task('sass', function() {
 
 gulp.task('scripts-main', function(){
   gulp.src(['./js/dbhelper.js', './js/main.js', './js/header.js'])
-  .pipe(concat('main.min.js'))
+  .pipe(concat('main.js'))
   .pipe(gulp.dest('./dist/js'))
 })
 
-gulp.task('mini', function(){
-  gulp.src('./dist/js/main/min.js')
+gulp.task('ugly', function(){
+  gulp.src('js/dbhelper.js')
   .pipe(uglify())
-  .pipe(gulp.dest('./dist/js'))
+  .pipe(gulp.dest('./dist/temp'))
 })
 
 gulp.task('watch', ['sass', 'scripts-main',], function(){
